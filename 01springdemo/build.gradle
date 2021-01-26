@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'org.springframework'
+version '5.2.0.RELEASE'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+// 添加两个依赖
+dependencies {
+    /**
+     * 1、引入项目中的spring-context模块，解析xml文件；
+     * 2、依赖传递，同时也引入了spring-context下的依赖，比如spring-core，aop等
+     */
+    compile(project(":spring-context"))
+
+    compile(project(":spring-aspects"))
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
