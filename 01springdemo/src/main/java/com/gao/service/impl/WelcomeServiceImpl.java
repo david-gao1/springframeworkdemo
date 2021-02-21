@@ -2,7 +2,9 @@ package com.gao.service.impl;
 
 
 import com.gao.service.WelcomeService;
+import org.springframework.stereotype.Service;
 
+@Service
 public class WelcomeServiceImpl implements WelcomeService {
 
 	@Override
